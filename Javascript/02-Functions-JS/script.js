@@ -25,15 +25,51 @@
 // called();
 
 // assignement 2 -- create a function that logs the sum of all the lap times.
-let lap1 = 34;
-let lap2 = 33;
-let lap3 = 36;
+// let lap1 = 34;
+// let lap2 = 33;
+// let lap3 = 36;
 
-let sum = 0;
+// let sum = 0;
 
-function sumOfLaps(){
-    sum = lap1+lap2+lap3;
-    console.log(sum);   
+// function sumOfLaps(){
+//     sum = lap1+lap2+lap3;
+//     console.log(sum);   
+// }
+
+// sumOfLaps();
+
+
+
+// Assignment 3 -- create a function that increments the variable lapscompleted with one
+// Run it three times.
+// let lapscompleted = 0;
+// function incremented(){
+//     lapscompleted++;
+//     console.log(lapscompleted);
+// }
+
+// incremented(lapscompleted);
+
+// this only increments it one time we need to make it increment 3 times
+// let lapscompleted =0;
+
+// function threetimes(){
+//     for(let i = 0; i<3; i++){
+//         lapscompleted++;
+//         console.log(lapscompleted);
+//     }
+// }
+
+// threetimes(lapscompleted);
+
+// this is one way of doing this by using a loop the other is calling the functon 3 times as we did below.
+
+let lapscompleted = 0;
+function incremented(){
+    lapscompleted++;
 }
 
-sumOfLaps();
+incremented();
+incremented();
+incremented();  
+console.log(lapscompleted);

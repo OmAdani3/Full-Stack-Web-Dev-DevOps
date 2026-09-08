@@ -1,0 +1,36 @@
+body{
+    background-image: url(premium_photo-1661906412572-172c5ae96d8d.jpg);
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    box-shadow: inset;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+#increment-btn{
+    background: darkred;
+}
+
+#increment-btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#save-btn:hover{
+    background: darkgoldenrod;
+    cursor: pointer;
+    transform: scale(1.1);
+}
