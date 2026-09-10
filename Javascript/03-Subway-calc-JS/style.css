@@ -34,3 +34,10 @@ button{
     cursor: pointer;
     transform: scale(1.1);
 }
+
+
+#reset-btn:hover{
+    background: darkgoldenrod;
+    cursor: pointer;
+    transform: scale(1.1);
+}
