@@ -1,14 +1,14 @@
 // Create two variables, firstCard and secondCard.
 // Set their values to random number between 2-11.
 
-let firstCard = 10;
-let secondCard = 11;
+// let firstCard = 10;
+// let secondCard = 11;
 
 // Create a variable, sum, and set it up to the sum of the two cards.
 
-let sum = firstCard + secondCard;
+// let sum = firstCard + secondCard;
 
-let hasBlackJack = false;
+// let hasBlackJack = false;
 
 // Write the conditional according to these rules.
 
@@ -18,34 +18,34 @@ let hasBlackJack = false;
 
 // 1. Create a variable called isAlive and assign it to true
 
-let isAlive = true;
+// let isAlive = true;
 
 // 2. Flip its value to false in the appropriate code block
 
 
 // ----- Another Assignment -----
 // 1. Declare a variable called message and assign its value to an empty string.
-let message = "";
+// let message = "";
 
 // 2. Reassign the message variable to the string we're logging out.
 
-if(sum <= 20){
-    // console.log("Do you want to draw a new card?");
-    message = "Do you want to draw a new card?"
-}else if(sum === 21){
-    // console.log("Wooho! You've got Blackjack!");
-    message = "Wooho! You've got Blackjack!";
-    hasBlackJack = true;
-}else{
-    // console.log("You're out of the game!");
-    message = "You're out of the game!"
-    isAlive = false;
-}
+// if(sum <= 20){
+//     // console.log("Do you want to draw a new card?");
+//     message = "Do you want to draw a new card?"
+// }else if(sum === 21){
+//     // console.log("Wooho! You've got Blackjack!");
+//     message = "Wooho! You've got Blackjack!";
+//     hasBlackJack = true;
+// }else{
+//     // console.log("You're out of the game!");
+//     message = "You're out of the game!"
+//     isAlive = false;
+// }
 
 
 // 3. Log it out
 
-console.log(message);
+// console.log(message);
 
 // CASH OUT!!
 // console.log(hasBlackJack);
@@ -64,3 +64,65 @@ console.log(message);
 // console.log(3 >= 3);    // true
 // console.log(11 <= 11);  // true
 // console.log(3 >= 2);    //false
+
+
+
+
+let firstCard = 4;
+let secondCard = 11;
+let cards = [firstCard, secondCard];
+let sum = firstCard + secondCard;
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
+
+// 1. Store the message-el paragraph in a variable called messageEl
+
+let messageEl = document.getElementById("message-el");
+
+// 2.1 store the sum paragraph in a variable called sumEl
+
+let sumEl = document.getElementById("sum-el");
+
+// 3.1 store the cards paragraph in a variable called cardsEl
+
+let cardsEl = document.getElementById("cards-el");
+
+// Create a startGame() function. Mve the conditional inside the body of the function.
+
+function startGame(){
+    renderGame();
+};
+
+function renderGame(){
+    // 3.2 Render the cards on the page ussing this format -> "Cards: 10 4"
+    cardsEl.textContent = "Cards: " + cards[0] + " " + cards[1];
+    // 2.2 Render the sum on the page using this format -> "Sum: 14"
+     sumEl.textContent = "Sum: " + sum;
+    if(sum <= 20){
+    message = "Do you want to draw a new card?"
+   
+}else if(sum === 21){
+    message = "You've got Blackjack!";
+    hasBlackJack = true;
+}else{
+    message = "You're out of the game!"
+    isAlive = false;
+}
+
+// 2. Display the message in the messageEl using messageEl.textcontent.
+     messageEl.textContent = message;
+    
+}
+
+function newCard(){
+    console.log("Drawing a new card from the deck!");
+
+    // 1. Create a card variable, and hard code its value to a number (2-11)
+    let card = 5;
+    // 2. Add the new card to the sum variable
+        sum += card;
+    // 3. Call startGame()
+    renderGame();
+}
+
