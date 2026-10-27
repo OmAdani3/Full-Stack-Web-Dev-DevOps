@@ -122,6 +122,11 @@ function newCard(){
     let card = 5;
     // 2. Add the new card to the sum variable
         sum += card;
+
+    // push the card to the cards array.
+        cards.push(card);
+    console.log(cards);
+    
     // 3. Call startGame()
     renderGame();
 }
